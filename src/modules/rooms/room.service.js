@@ -61,6 +61,7 @@ export const createRoom = async (hostId) => {
   });
 
   return {
+    room_id: room.id,
     pin_code: room.pinCode,
     mqtt_topic: mqttTopic,
     agora_token: agoraToken,
@@ -99,6 +100,8 @@ export const joinRoom = async (userId, pinCode) => {
   });
 
   return {
+    room_id: room.id,
+    pin_code: room.pinCode,
     mqtt_topic: mqttTopic,
     agora_token: agoraToken,
   };
